@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Models\EthnicGroup;
-use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -21,9 +21,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // View::composer('*', function ($view) {
-        //     $ethnicGroups = EthnicGroup::all();
-        //     $view->with('ethnicGroups', $ethnicGroups);
-        // });
+        // Define a custom Blade directive for checking routes
+        Blade::directive('routeHas', function ($route) {
+            return "<?php echo Route::has($route) ? 'true' : 'false'; ?>";
+        });
     }
 }

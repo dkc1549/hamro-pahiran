@@ -126,5 +126,9 @@ return [
     'aliases' => [
         'View' => Illuminate\Support\Facades\View::class,
     ],
-
+'aliases' => [
+    // ... other aliases
+    'Route' => Illuminate\Support\Facades\Route::class,
+    'Auth' => Illuminate\Support\Facades\Auth::class,
+],
 ];
