@@ -6,12 +6,12 @@
                 <div class="hero__categories">
                     <div class="hero__categories__all">
                         <i class="fa fa-bars"></i>
-                        <span>All departments</span>
+                        <span>Ethnic Groups</span>
                     </div>
                     <ul>
                         @foreach ($ethnicGroups as $group)
                             <li>
-                                <a href="">{{$group->name}}</a>
+                                <a href="">{{ $group->name }}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -39,14 +39,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__item set-bg" data-setbg="{{ asset('frontend/img/hero/banner.jpg') }}">
-                    <div class="hero__text">
-                        <span>Best Clothes</span>
-                        <h2>Religious and <br />Ethnics</h2>
-                        <p>Free Pickup and Delivery Available</p>
-                        <a href="#" class="primary-btn">SHOP NOW</a>
+                @if (request()->route('index'))
+                    <div class="hero__item set-bg" data-setbg="{{ asset('frontend/img/hero/banner.jpg') }}">
+                        <div class="hero__text">
+                            <span>Best Clothes</span>
+                            <h2>Religious and <br />Ethnics</h2>
+                            <p>Free Pickup and Delivery Available</p>
+                            <a href="#" class="primary-btn">SHOP NOW</a>
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div>
     </div>

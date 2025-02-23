@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\SellerOutfit;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -24,9 +25,11 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create(['role' => 'user']);
 
         $this->call([
-            SellerSeeder::class,
+            // SellerSeeder::class,
             EthnicGroupSeeder::class,
-            OutfitSeeder::class,
+            // OutfitSeeder::class,
+            SellerOutfitSeeder::class,
+            OutfitMaterialSeeder::class,
         ]);
     }
 }
