@@ -72,7 +72,6 @@ class OutfitController extends Controller
             if ($outfit->photo) {
                 Storage::disk('public')->delete($outfit->photo);
             }
-
             $data['photo'] = $request->file('photo')->store('outfits', 'public');
         }
 
