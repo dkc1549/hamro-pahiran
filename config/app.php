@@ -125,6 +125,10 @@ return [
 
     'aliases' => [
         'View' => Illuminate\Support\Facades\View::class,
+        'App' => Illuminate\Support\Facades\App::class,
+        'Artisan' => Illuminate\Support\Facades\Artisan::class,
+        'Route' => Illuminate\Support\Facades\Route::class,
+        'Auth' => Illuminate\Support\Facades\Auth::class,
     ],
 
 ];

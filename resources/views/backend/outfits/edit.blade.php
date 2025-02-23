@@ -36,12 +36,12 @@
 
                     <div class="mb-3">
                         <label for="image" class="form-label">Outfit Image</label>
-                        <input type="file" class="form-control" id="image" name="image" accept="image/*" onchange="previewImage(event)">
-                        @error('image')
+                        <input type="file" class="form-control" id="image" name="photo" accept="image/*" onchange="previewImage(event)">
+                        @error('photo')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                         <div class="mt-2">
-                            <img id="image-preview" src="{{ asset('storage/' . $outfit->image) }}" width="100px" class="{{ $outfit->image ? '' : 'd-none' }}">
+                            <img id="image-preview" src="{{ asset('storage/' . $outfit->photo) }}" width="100px" class="{{ $outfit->photo ? '' : 'd-none' }}">
                         </div>
                     </div>
 

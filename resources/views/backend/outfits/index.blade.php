@@ -28,7 +28,7 @@
                                 <td>{{ $outfit->name }}</td>
                                 <td>{{ $outfit->ethnicGroup->name }}</td>
                                 <td>
-                                    <img src="{{ asset('storage/' . $outfit->image) }}" width="50px" height="50px" alt="">
+                                    <img src="{{ asset('storage/' . $outfit->photo) }}" width="50px" height="50px" alt="">
                                 </td>
                                 <td>
                                     <a href="{{ route('admin.outfits.edit', $outfit->id) }}" class="btn btn-warning btn-sm">Edit</a>
