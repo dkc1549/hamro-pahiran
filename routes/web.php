@@ -4,10 +4,6 @@ use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 require __DIR__ . "/admin.php";
 Auth::routes();
 
